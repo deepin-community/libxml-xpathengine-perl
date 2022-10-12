@@ -1,0 +1,31 @@
+Source: libxml-xpathengine-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>,
+           Damyan Ivanov <dmn@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper (>= 10)
+Build-Depends-Indep: perl,
+                     libtest-pod-coverage-perl,
+                     libtest-pod-perl
+Standards-Version: 4.1.3
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-perl/packages/libxml-xpathengine-perl.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-perl/packages/libxml-xpathengine-perl.git
+Homepage: https://metacpan.org/release/XML-XPathEngine
+
+Package: libxml-xpathengine-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends}
+Description: re-usable XPath engine for DOM-like trees
+ XML::XPathEngine provides an XPath engine, that can be re-used by other
+ module/classes that implement trees.
+ .
+ In order to use the XPath engine, nodes in the user module need to mimic
+ DOM nodes. The degree of similarity between the user tree and a DOM dictates 
+ how much of the XPath features can be used. A module implementing all of the
+ DOM should be able to use this module very easily (you might need to add
+ the cmp method on nodes in order to get ordered result sets).
+ .
+ This module is derived from Matt Sergeant's XML::XPath.

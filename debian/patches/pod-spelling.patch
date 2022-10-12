@@ -1,0 +1,33 @@
+Description: a tiny typo in POD (mimick -> mimic)
+Author: Damyan Ivanov <dmn@debian.org>
+Bug: https://rt.cpan.org/Public/Bug/Display.html?id=85391
+
+--- a/lib/XML/XPathEngine.pm
++++ b/lib/XML/XPathEngine.pm
+@@ -272,7 +272,7 @@ sub _tokenize {
+     
+     # Bug: We don't allow "'@' NodeType" which is in the grammar, but I think is just plain stupid.
+ 
+-    my $expected=''; # used to desambiguate conflicts (for REs)
++    my $expected=''; # used to disambiguate conflicts (for REs)
+ 
+     while( length($path))
+       { my $token='';
+@@ -1003,7 +1003,7 @@ XML::XPathEngine - a re-usable XPath eng
+ This module provides an XPath engine, that can be re-used by other
+ module/classes that implement trees.
+ 
+-In order to use the XPath engine, nodes in the user module need to mimick
++In order to use the XPath engine, nodes in the user module need to mimic
+ DOM nodes. The degree of similitude between the user tree and a DOM dictates 
+ how much of the XPath features can be used. A module implementing all of the
+ DOM should be able to use this module very easily (you might need to add
+@@ -1165,7 +1165,7 @@ backslashed), the C<imsx> modifiers can
+ 
+ L<XML::XPath>
+ 
+-L<HTML::TreeBuilder::XPath>, L<XML::Twig::XPath> for exemples of using this module
++L<HTML::TreeBuilder::XPath>, L<XML::Twig::XPath> for examples of using this module
+ 
+ L<Tree::XPathEngine> for a similar module for non-XML trees.
+ 
